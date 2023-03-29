@@ -1,7 +1,10 @@
-name: example-environment
+name: mach
 channels:
   - conda-forge
 dependencies:
   - lammps
   - openkim-models
+  - kimpy
+  - ase
+  - kim-query
   
