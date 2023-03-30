@@ -2,7 +2,7 @@ Conda environment with environment.yml
 --------------------------------------
 
 .. image:: https://mybinder.org/badge_logo.svg
- :target: https://mybinder.org/v2/gh/ilia-nikiforov-umn/mach-binder-conda/main
+ :target: https://mybinder.org/v2/gh/ilia-nikiforov-umn/mach-binder-conda/HEAD?labpath=sample.ipynb
 
 ## Notes
 The `environment.yml` file should list all Python libraries on which your notebooks
