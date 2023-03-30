@@ -1,14 +1,14 @@
-# Define KIM model and get Si diamond lattice parameter for this potential
-kim init         SW_StillingerWeber_1985_Si__MO_405512056662_005 metal
-kim query        a0 get_lattice_constant_cubic crystal=["diamond"] species=["Si"] units=["angstrom"]
-# Setup diamond crystal
-boundary         p p s
-lattice          diamond ${a0}
+kim init         EAM_Dynamo_ErcolessiAdams_1994_Al__MO_123629422045_005 metal
+kim query        a0 get_lattice_constant_cubic crystal=["fcc"] species=["Al"] units=["angstrom"]
+# Setup fcc slab
+boundary         p p f
+lattice          fcc ${a0}
 region           simbox block 0 3 0 3 0 3 units lattice
 create_box       1 simbox
 create_atoms     1 box
-mass             1 28.0855
-# Define atom type to species mapping
-kim interactions Si
+mass             1 1.
+# Define atom type to element mapping
+kim interactions Al
 # Compute energy
-run 0
+thermo_style custom step pe fmax
+minimize 0.0 1.0e-8 1000 100000
