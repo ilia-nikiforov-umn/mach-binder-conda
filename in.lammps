@@ -3,7 +3,7 @@ kim query        a0 get_lattice_constant_cubic crystal=["fcc"] species=["Al"] un
 # Setup fcc slab
 boundary         p p f
 lattice          fcc ${a0}
-region           simbox block 0 3 0 3 0 3 units lattice
+region           simbox block 0 9 0 9 0 9 units lattice
 create_box       1 simbox
 create_atoms     1 box
 mass             1 1.
